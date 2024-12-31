@@ -1,101 +1,122 @@
-import Image from "next/image";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <main className="bg-gray-50 min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-serif">
+            Welcome to Genetic Insights
+          </h1>
+          <p className="text-lg md:text-xl font-light italic">
+            Exploring the fascinating world of genetic engineering
+          </p>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* About Me Section */}
+        <section className="container mx-auto px-4 py-12">
+          <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+            About Me
+          </h2>
+          <div className="bg-white shadow-lg rounded-lg p-6 md:p-12 transition-transform transform hover:-translate-y-2 hover:shadow-xl">
+            <h3 className="text-xl md:text-2xl font-bold text-purple-700 mb-4">
+              Meet a Genetic Engineer
+            </h3>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Hello, I’m a passionate genetic engineer with a mission to unravel
+              the complexities of DNA and transform them into practical
+              solutions. With a background in cutting-edge research, I specialize in genetic modification, bioinformatics, and biotechnological advancements.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              My work spans across multiple domains of genetic engineering,
+              including CRISPR technology, genetic therapy, and sustainable
+              agriculture. I believe in the potential of genetic science to
+              revolutionize healthcare, food production, and environmental
+              sustainability. Through this platform, I aim to educate, inspire,
+              and engage readers who share my curiosity about the genetic code
+              that defines life.
+            </p>
+            <h4 className="text-lg md:text-xl font-bold text-pink-600 mb-3">
+              Professional Experience
+            </h4>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              With several years of experience in laboratory research and
+              real-world applications, I have collaborated with leading
+              scientists and institutions to tackle some of the biggest
+              challenges in biotechnology. My projects include developing
+              disease-resistant crops, exploring gene editing as a therapeutic
+              tool, and decoding complex genetic pathways for rare diseases.
+            </p>
+            <h4 className="text-lg md:text-xl font-bold text-pink-600 mb-3">
+              My Vision
+            </h4>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              I envision a world where genetic engineering becomes an accessible
+              tool for solving humanity&apos;s most pressing problems, from curing
+              genetic disorders to ensuring food security for a growing global
+              population. By demystifying the science behind genetic
+              engineering, I hope to make it less intimidating and more
+              approachable for everyone.
+            </p>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Author of multiple articles on cutting-edge genetic tools</li>
+              <li>Advocate for ethical applications of genetic technologies</li>
+              <li>Mentor to aspiring scientists in the field of biotechnology</li>
+              <li>Innovator in the development of sustainable biotechnologies</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* More About Me Section */}
+        <section className="container mx-auto px-4 py-12 bg-white shadow-lg rounded-lg p-6 md:p-12 transition-transform transform hover:-translate-y-2 hover:shadow-xl">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+            Why I Started This Blog
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Genetic engineering has the power to change lives, but it’s often
+            misunderstood or misrepresented. I created this blog to bridge the
+            gap between scientific communities and the public. My goal is to
+            make advanced genetic concepts accessible, spark curiosity, and
+            provide a trusted resource for anyone looking to understand this
+            fascinating field.
+          </p>
+          <h4 className="text-lg md:text-xl font-bold text-purple-700 mb-3">
+            Topics I Cover
+          </h4>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>CRISPR and its groundbreaking applications</li>
+            <li>Gene editing for human health and agriculture</li>
+            <li>Bioethical considerations in genetic engineering</li>
+            <li>Innovations in biotechnology and future trends</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-6">
+            If you’re a student, researcher, or just someone curious about the
+            genetic sciences, this blog is your gateway to learning more. Let’s
+            explore the genetic blueprint of life together!
+          </p>
+        </section>
+
+        {/* Explore Blogs Section */}
+        <section className="bg-white text-black py-12 border-spacing-2">
+          <div className="container mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Explore My Work
+            </h3>
+            <p className="mb-6">
+              Discover how genetic engineering is reshaping our future. Click
+              below to read my latest blogs and stay informed.
+            </p>
+            <Link href="/blogsPage">
+              <span className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                Visit My Blogs
+              </span>
+            </Link>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
+
