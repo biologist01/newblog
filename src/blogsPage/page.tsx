@@ -1,6 +1,6 @@
 // import Link from 'next/link';
 // import blogPosts from '../blogData/page'; // Ensure this path is correct
-
+import Image from "next/image";
 import blogPosts from "@/blogData/page";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ const BlogPage = () => {
               key={post.id}
               className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
             >
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
                 className="w-full h-48 object-cover"

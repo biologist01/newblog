@@ -2,6 +2,7 @@
 import blogPosts from '../../blogData/page';
 import { useState } from 'react';
 import CommentSection from '@/components/Comment';
+import Image from 'next/image';
 
 const BlogPost = ({ params }: { params: { blog: string } }) => {
   const blog = params.blog;
@@ -27,7 +28,7 @@ const BlogPost = ({ params }: { params: { blog: string } }) => {
       <div className="container mx-auto px-6">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           {/* Blog Header Image */}
-          <img
+          <Image
             src={post.image}
             alt={post.title}
             className="w-full h-64 object-cover cursor-pointer"
@@ -71,7 +72,7 @@ const BlogPost = ({ params }: { params: { blog: string } }) => {
           onClick={() => setModalOpen(false)} // Close modal when clicking outside the image 
         >
           <div className="relative">
-            <img
+            <Image
               src={post.image}
               alt={post.title}
               className="max-w-full max-h-screen object-contain"
